@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently \"nodemon --env-file=.env ./src/index\" \"npm run stripe\"",
     "stripe": "stripe listen --forward-to localhost:5500/api/order/checkout/webhook",
-    "start": "node index"
+    "build": "npm install",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
