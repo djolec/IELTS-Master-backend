@@ -15,6 +15,10 @@ app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 
 app.use(express.json());
 
+app.get("/health", async (req, res) => {
+  res.send({ message: "health OK" });
+});
+
 app.use("/api/user", userRoute);
 app.use("/api/order", orderRoute);
 
